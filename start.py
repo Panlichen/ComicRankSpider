@@ -41,8 +41,8 @@ if __name__ == '__main__':
     u17 = U17(path)
     u17.crawl()
     print "有妖气完成"
-    '''
+    
     netease = NetEase(path) 
     netease.crawl()
     print "网易完成"  
-    '''
+    
