@@ -51,7 +51,7 @@ class U17:
             driver2.get(a_ele.get_attribute('href'))
             ws['M' + str(idx + 2)] = driver2.find_element_by_css_selector('body > div.wrap.cf > div.comic_info > div.left > div.info > div.top > div.line1 > i').text
             
-            print 'U17 新签约榜 '+ idx + '/20'
+            print 'U17 新签约榜 ', idx , '/20'
             if idx == 20:
                 break
             idx += 1
@@ -77,7 +77,7 @@ class U17:
                 ws['P' + str(idx + 2)] = driver2.find_element_by_css_selector('body > div.wrap.cf > div.comic_info > div.left > div.info > div.top > div.line1 > i').text
                 ws['Q' + str(idx + 2)] = driver2.find_element_by_css_selector('body > div.wrap.cf > div.comic_info > div.left > div.info > div.top > div.line2 > i').text
             
-            print 'U17 圣殿榜 '+ idx + '/20'
+            print 'U17 圣殿榜 ', idx , '/20'
             if idx == 20:
                 break
             idx += 1
@@ -97,7 +97,7 @@ class U17:
             ws['R' + str(idx + 2)] = a_ele.text
             ws['S' + str(idx + 2)] = d_ele.text
             
-            print 'U17 订阅上升榜 '+ idx + '/20'
+            print 'U17 订阅上升榜 ', idx , '/20'
             if idx == 20:
                 break
             idx += 1

@@ -49,7 +49,7 @@ class Tencent(object):
             str_tag = self.get_str_tag(name.get_attribute('href'), driver2)
             ws['C' + str(idx + 2)] = str_tag
             
-            print 'Tencent 月票 '+ idx + '/20'
+            print 'Tencent 月票 ', idx , '/20'
             
             if idx == 20:
                 break
@@ -72,7 +72,7 @@ class Tencent(object):
         idx = 1
         for name in names:
             ws['E' + str(idx + 2)] = name.get_attribute('title')
-            print 'Tencent 打赏 '+ idx + '/20'
+            print 'Tencent 打赏 ', idx , '/20'
             str_tag = self.get_str_tag(name.get_attribute('href'), driver2)
             ws['F' + str(idx + 2)] = str_tag
             if idx == 20:
@@ -106,7 +106,7 @@ class Tencent(object):
             ws['H' + str(idx + 2)] = str_tag
             data = driver2.find_element_by_css_selector('#special_bg > div:nth-child(3) > div.ui-left.works-intro-wr > div.works-intro.clearfix > div.works-intro-detail.ui-left > div.works-intro-text > p.works-intro-digi > span:nth-child(2) > em').text
             ws['I' + str(idx + 2)] = data
-            print 'Tencent 人气 '+ idx + '/20'
+            print 'Tencent 人气 ', idx , '/20'
             if idx == 20:
                 break
             idx += 1

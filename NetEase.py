@@ -51,7 +51,7 @@ class NetEase:
             str_click = name.find_element_by_css_selector('.comic-meta').text
             ws['W' + str(idx + 2)] = str_click[str_click.find(' ') + 1 : ]
             
-            print 'NetEase 人气榜 '+ idx + '/20'
+            print 'NetEase 人气榜 ', idx , '/20'
             if idx == 20:
                 break
             idx += 1
@@ -75,7 +75,7 @@ class NetEase:
             
             str_award = name.find_element_by_css_selector('.comic-meta').text
             ws['Z' + str(idx + 2)] = str_award[4 : ]
-            print 'NetEase 打赏榜 '+ idx + '/20'
+            print 'NetEase 打赏榜 ', idx , '/20'
             if idx == 20:
                 break
             idx += 1
