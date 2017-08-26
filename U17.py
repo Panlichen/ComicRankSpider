@@ -70,9 +70,10 @@ class U17:
             ws['N' + str(idx + 2)] = a_ele.text
             ws['O' + str(idx + 2)] = d_ele.text
             driver2.get(a_ele.get_attribute('href'))
-            if idx == 1:
-                ws['P' + str(idx + 2)] = driver2.find_element_by_css_selector('#comicInfo > div.zhenhunjie_wrap.bg1 > div.area > div.wrap.cf > div.comic_info > div.left > div.info > div.top > div.cf.line2 > div:nth-child(2) > span').text
-                ws['Q' + str(idx + 2)] = driver2.find_element_by_css_selector('#comicInfo > div.zhenhunjie_wrap.bg1 > div.area > div.wrap.cf > div.comic_info > div.left > div.info > div.top > div.cf.line2 > div:nth-child(3) > span').text
+            page_name  = driver2.find_element_by_css_selector('.comic_info .left .fl').text
+            if  unicode(page_name) == u'十万个冷笑话' or unicode(page_name) == u'镇魂街':
+                ws['P' + str(idx + 2)] = driver2.find_element_by_css_selector('div.cf.line2 > div:nth-child(2) > span').text
+                ws['Q' + str(idx + 2)] = driver2.find_element_by_css_selector('div.cf.line2 > div:nth-child(3) > span').text
             else:
                 ws['P' + str(idx + 2)] = driver2.find_element_by_css_selector('body > div.wrap.cf > div.comic_info > div.left > div.info > div.top > div.line1 > i').text
                 ws['Q' + str(idx + 2)] = driver2.find_element_by_css_selector('body > div.wrap.cf > div.comic_info > div.left > div.info > div.top > div.line2 > i').text
